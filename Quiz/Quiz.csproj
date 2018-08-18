@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA28FE05-97AE-468E-A80A-31F72B5DC565}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Quiz</RootNamespace>
+    <AssemblyName>Quiz</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.MOVIEPLAYERLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ShockFlash\bin\Debug\AxInterop.MOVIEPLAYERLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ModelView\GradeFive\Chpaters.cs" />
+    <Compile Include="ModelView\GradeFive\MCQ.cs" />
+    <Compile Include="ModelView\GradeFour\Animiation.cs" />
+    <Compile Include="ModelView\GradeFour\Chpaters.cs" />
+    <Compile Include="ModelView\GradeFour\MCQ.cs" />
+    <Compile Include="ModelView\GradeList\Grade.cs" />
+    <Compile Include="ModelView\QuestionCollection.cs" />
+    <Compile Include="Model\Units.cs" />
+    <Compile Include="Pages\Classes.xaml.cs">
+      <DependentUpon>Classes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\player.xaml.cs">
+      <DependentUpon>player.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Score.xaml.cs">
+      <DependentUpon>Score.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SwfPlayer.xaml.cs">
+      <DependentUpon>SwfPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WinMediaPlayer.xaml.cs">
+      <DependentUpon>WinMediaPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\ExpanderPage.xaml.cs">
+      <DependentUpon>ExpanderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MCQ.xaml.cs">
+      <DependentUpon>MCQ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\roundgelbuttonStyle.xaml.cs">
+      <DependentUpon>roundgelbuttonStyle.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\Classes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\player.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Score.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Slider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SwfPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\WinMediaPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\ExpanderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MCQ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\roundgelbuttonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\StealthButtonRD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\ani.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Animiation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\mcq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ModelView\GradeFive\AFL\" />
+    <Folder Include="ModelView\GradeFive\Animiation\" />
+    <Folder Include="ModelView\GradeFive\Chapters\" />
+    <Folder Include="ModelView\GradeFive\MCQ\" />
+    <Folder Include="ModelView\GradeFive\RLA\" />
+    <Folder Include="ModelView\GradeFive\Subjects\" />
+    <Folder Include="ModelView\GradeFive\TeachingIdeas\" />
+    <Folder Include="ModelView\GradeFive\TopicSynopsis\" />
+    <Folder Include="ModelView\GradeFive\Website\" />
+    <Folder Include="ModelView\GradeFive\Worksheets\" />
+    <Folder Include="ModelView\GradeFour\AFL\" />
+    <Folder Include="ModelView\GradeFour\Animiation\" />
+    <Folder Include="ModelView\GradeFour\Chapters\" />
+    <Folder Include="ModelView\GradeFour\MCQ\" />
+    <Folder Include="ModelView\GradeFour\RLA\" />
+    <Folder Include="ModelView\GradeFour\Subjects\" />
+    <Folder Include="ModelView\GradeFour\TeachingIdeas\" />
+    <Folder Include="ModelView\GradeFour\TopicSynopsis\" />
+    <Folder Include="ModelView\GradeFour\Website\" />
+    <Folder Include="ModelView\GradeFour\Worksheets\" />
+    <Folder Include="ModelView\GradeNine\AFL\" />
+    <Folder Include="ModelView\GradeNine\Animiation\" />
+    <Folder Include="ModelView\GradeNine\Chapters\" />
+    <Folder Include="ModelView\GradeNine\MCQ\" />
+    <Folder Include="ModelView\GradeNine\RLA\" />
+    <Folder Include="ModelView\GradeNine\Subjects\" />
+    <Folder Include="ModelView\GradeNine\TeachingIdeas\" />
+    <Folder Include="ModelView\GradeNine\TopicSynopsis\" />
+    <Folder Include="ModelView\GradeNine\Website\" />
+    <Folder Include="ModelView\GradeNine\Worksheets\" />
+    <Folder Include="ModelView\GradeOne\AFL\" />
+    <Folder Include="ModelView\GradeOne\Animiation\" />
+    <Folder Include="ModelView\GradeOne\Chapters\" />
+    <Folder Include="ModelView\GradeOne\MCQ\" />
+    <Folder Include="ModelView\GradeOne\RLA\" />
+    <Folder Include="ModelView\GradeOne\Subjects\" />
+    <Folder Include="ModelView\GradeOne\TeachingIdeas\" />
+    <Folder Include="ModelView\GradeOne\TopicSynopsis\" />
+    <Folder Include="ModelView\GradeOne\Website\" />
+    <Folder Include="ModelView\GradeOne\Worksheets\" />
+    <Folder Include="ModelView\GradeSeven\AFL\" />
+    <Folder Include="ModelView\GradeSeven\Animiation\" />
+    <Folder Include="ModelView\GradeSeven\Chapters\" />
+    <Folder Include="ModelView\GradeSeven\MCQ\" />
+    <Folder Include="ModelView\GradeSeven\RLA\" />
+    <Folder Include="ModelView\GradeSeven\Subjects\" />
+    <Folder Include="ModelView\GradeSeven\TeachingIdeas\" />
+    <Folder Include="ModelView\GradeSeven\TopicSynopsis\" />
+    <Folder Include="ModelView\GradeSeven\Website\" />
+    <Folder Include="ModelView\GradeSeven\Worksheets\" />
+    <Folder Include="ModelView\GradeSix\AFL\" />
+    <Folder Include="ModelView\GradeSix\Animiation\" />
+    <Folder Include="ModelView\GradeSix\Chapters\" />
+    <Folder Include="ModelView\GradeSix\MCQ\" />
+    <Folder Include="ModelView\GradeSix\RLA\" />
+    <Folder Include="ModelView\GradeSix\Subjects\" />
+    <Folder Include="ModelView\GradeSix\TeachingIdeas\" />
+    <Folder Include="ModelView\GradeSix\TopicSynopsis\" />
+    <Folder Include="ModelView\GradeSix\Website\" />
+    <Folder Include="ModelView\GradeSix\Worksheets\" />
+    <Folder Include="ModelView\GradeTen\AFL\" />
+    <Folder Include="ModelView\GradeTen\Animiation\" />
+    <Folder Include="ModelView\GradeTen\Chapters\" />
+    <Folder Include="ModelView\GradeTen\MCQ\" />
+    <Folder Include="ModelView\GradeTen\RLA\" />
+    <Folder Include="ModelView\GradeTen\Subjects\" />
+    <Folder Include="ModelView\GradeTen\TeachingIdeas\" />
+    <Folder Include="ModelView\GradeTen\TopicSynopsis\" />
+    <Folder Include="ModelView\GradeTen\Website\" />
+    <Folder Include="ModelView\GradeTen\Worksheets\" />
+    <Folder Include="ModelView\GradeThree\AFL\" />
+    <Folder Include="ModelView\GradeThree\Animiation\" />
+    <Folder Include="ModelView\GradeThree\Chapters\" />
+    <Folder Include="ModelView\GradeThree\MCQ\" />
+    <Folder Include="ModelView\GradeThree\RLA\" />
+    <Folder Include="ModelView\GradeThree\Subjects\" />
+    <Folder Include="ModelView\GradeThree\TeachingIdeas\" />
+    <Folder Include="ModelView\GradeThree\TopicSynopsis\" />
+    <Folder Include="ModelView\GradeThree\Website\" />
+    <Folder Include="ModelView\GradeThree\Worksheets\" />
+    <Folder Include="ModelView\GradeTwo\AFL\" />
+    <Folder Include="ModelView\GradeTwo\Animiation\" />
+    <Folder Include="ModelView\GradeTwo\Chapters\" />
+    <Folder Include="ModelView\GradeTwo\MCQ\" />
+    <Folder Include="ModelView\GradeTwo\RLA\" />
+    <Folder Include="ModelView\GradeTwo\Subjects\" />
+    <Folder Include="ModelView\GradeTwo\TeachingIdeas\" />
+    <Folder Include="ModelView\GradeTwo\TopicSynopsis\" />
+    <Folder Include="ModelView\GradeTwo\Website\" />
+    <Folder Include="ModelView\GradeTwo\Worksheets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\worksheet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Assestment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\idea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\RLA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\weblink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\quiz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Graphic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMOVIEPLAYERLib">
+      <Guid>{062F78EB-5E1D-43A7-9135-96E1392B3950}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MOVIEPLAYERLib">
+      <Guid>{062F78EB-5E1D-43A7-9135-96E1392B3950}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="ShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShockFlash\ShockFlash.csproj">
+      <Project>{1aee5cf1-20db-40bc-9fb4-57b0e1c751b1}</Project>
+      <Name>ShockFlash</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\control_eject.png" />
+    <Resource Include="Icons\control_eject_blue.png" />
+    <Resource Include="Icons\control_end.png" />
+    <Resource Include="Icons\control_end_blue.png" />
+    <Resource Include="Icons\control_equalizer.png" />
+    <Resource Include="Icons\control_equalizer_blue.png" />
+    <Resource Include="Icons\control_fastforward.png" />
+    <Resource Include="Icons\control_fastforward_blue.png" />
+    <Resource Include="Icons\control_pause.png" />
+    <Resource Include="Icons\control_pause_blue.png" />
+    <Resource Include="Icons\control_play.png" />
+    <Resource Include="Icons\control_play_blue.png" />
+    <Resource Include="Icons\control_repeat.png" />
+    <Resource Include="Icons\control_repeat_blue.png" />
+    <Resource Include="Icons\control_rewind.png" />
+    <Resource Include="Icons\control_rewind_blue.png" />
+    <Resource Include="Icons\control_start.png" />
+    <Resource Include="Icons\control_start_blue.png" />
+    <Resource Include="Icons\control_stop.png" />
+    <Resource Include="Icons\control_stop_blue.png" />
+    <Resource Include="Pages\Images\control_eject.png" />
+    <Resource Include="Pages\Images\control_eject_blue.png" />
+    <Resource Include="Pages\Images\control_end.png" />
+    <Resource Include="Pages\Images\control_end_blue.png" />
+    <Resource Include="Pages\Images\control_equalizer.png" />
+    <Resource Include="Pages\Images\control_equalizer_blue.png" />
+    <Resource Include="Pages\Images\control_fastforward.png" />
+    <Resource Include="Pages\Images\control_fastforward_blue.png" />
+    <Resource Include="Pages\Images\control_pause.png" />
+    <Resource Include="Pages\Images\control_pause_blue.png" />
+    <Resource Include="Pages\Images\control_play.png" />
+    <Resource Include="Pages\Images\control_play_blue.png" />
+    <Resource Include="Pages\Images\control_repeat.png" />
+    <Resource Include="Pages\Images\control_repeat_blue.png" />
+    <Resource Include="Pages\Images\control_rewind.png" />
+    <Resource Include="Pages\Images\control_rewind_blue.png" />
+    <Resource Include="Pages\Images\control_start.png" />
+    <Resource Include="Pages\Images\control_start_blue.png" />
+    <Resource Include="Pages\Images\control_stop.png" />
+    <Resource Include="Pages\Images\control_stop_blue.png" />
+    <Resource Include="Pages\Images\speaker1.jpg" />
+    <Resource Include="Pages\Images\speaker2.jpg" />
+    <Resource Include="Pages\Images\forward.png" />
+    <Resource Include="Pages\Images\previous.png" />
+    <Content Include="Vedios\video-1531389122.swf" />
+    <Content Include="Vedios\video-1531389123.swf" />
+    <Content Include="Vedios\video-1531389124.swf" />
+    <Content Include="Vedios\video-1531389125.swf" />
+    <Content Include="Vedios\video-1531389126.swf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,274 @@
+﻿<Window x:Class="Quiz.Pages.player"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Quiz.Pages"
+        mc:Ignorable="d"
+        Title="Binod" Height="537" Width="520">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Slider.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+
+    </Window.Resources>
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+   
+            <DockPanel Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,10,0,0">
+            <Grid>
+                <Grid.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="ControlsGrid" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="ControlsGrid" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0" Duration="0:0:0.9" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Grid.Triggers>
+                <Button Name="Next" Height="80" Width="30" Style="{DynamicResource Transparentback}" Panel.ZIndex="2" DockPanel.Dock="Right" HorizontalAlignment="Right" Foreground="White" VerticalAlignment="Center" Margin="5" FontSize="24" FontWeight="Bold" BorderThickness="0" Click="Next_Click">
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="ControlsGrid" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3" />
+                                    <DoubleAnimation Storyboard.TargetName="Next" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3" />
+                                    <DoubleAnimation Storyboard.TargetName="Previous" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3" />
+
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="ControlsGrid" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0" Duration="0:0:0.9" />
+                                    <DoubleAnimation Storyboard.TargetName="Next" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0" Duration="0:0:0.9" />
+                                    <DoubleAnimation Storyboard.TargetName="Previous" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0" Duration="0:0:0.9" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                    <Button.Background>
+                            <LinearGradientBrush Opacity="0"  StartPoint="0,0" EndPoint="0,1">
+                                <GradientBrush.GradientStops>
+                                    <GradientStopCollection>
+                                        <GradientStop Color="#6B79C6" Offset="0.0"/>
+                                        <GradientStop Color="#122BB8" Offset="1.0"/>
+                                    </GradientStopCollection>
+                                </GradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                   
+                    <Image Source="Images/forward.png" />
+                </Button>
+
+                <Button Name="Previous" Height="80" Width="30" Style="{DynamicResource Transparentback}" Panel.ZIndex="3" DockPanel.Dock="Left" HorizontalAlignment="Left" Foreground="White" VerticalAlignment="Center" Margin="5" FontSize="24" FontWeight="Bold" BorderThickness="0"  Click="Previous_Click">
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="ControlsGrid" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3" />
+                                    <DoubleAnimation Storyboard.TargetName="Next" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3" />
+                                    <DoubleAnimation Storyboard.TargetName="Previous" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3" />
+
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="ControlsGrid" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0" Duration="0:0:0.9" />
+                                    <DoubleAnimation Storyboard.TargetName="Next" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0" Duration="0:0:0.9" />
+                                    <DoubleAnimation Storyboard.TargetName="Previous" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0" Duration="0:0:0.9" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                    <Button.Background>
+                    <LinearGradientBrush Opacity="0"  StartPoint="0,0" EndPoint="0,1">
+                        <GradientBrush.GradientStops>
+                            <GradientStopCollection>
+                                <GradientStop Color="#6B79C6" Offset="0.0"/>
+                                <GradientStop Color="#122BB8" Offset="1.0"/>
+                            </GradientStopCollection>
+                        </GradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                    </Button.Background>
+                    <Image Source="Images/previous.png" />
+                </Button>
+                <MediaElement Panel.ZIndex="0"   
+                              Name="McMediaElement"  LoadedBehavior="Manual"  Stretch="Fill"
+                 MediaOpened="Element_MediaOpened" MediaEnded="Element_MediaEnded" SizeChanged="McMediaElement_SizeChanged" MouseLeftButtonUp="McMediaElement_MouseLeftButtonUp">
+                    <MediaElement.Triggers>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="ControlsGrid" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3" />
+                                    <DoubleAnimation Storyboard.TargetName="Next" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3" />
+                                    <DoubleAnimation Storyboard.TargetName="Previous" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3" />
+                                    
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="ControlsGrid" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0" Duration="0:0:0.9" />
+                                    <DoubleAnimation Storyboard.TargetName="Next" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0" Duration="0:0:0.9" />
+                                    <DoubleAnimation Storyboard.TargetName="Previous" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0" Duration="0:0:0.9" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </MediaElement.Triggers>
+                </MediaElement>
+                <DockPanel Panel.ZIndex="1"  Background="Transparent" VerticalAlignment="Bottom"  HorizontalAlignment="Stretch">
+                    <DockPanel.Triggers>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="ControlsGrid" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3" />
+                                    <DoubleAnimation Storyboard.TargetName="Next" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3" />
+                                    <DoubleAnimation Storyboard.TargetName="Previous" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3" />
+
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="ControlsGrid" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0" Duration="0:0:0.9" />
+                                    <DoubleAnimation Storyboard.TargetName="Next" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0" Duration="0:0:0.9" />
+                                    <DoubleAnimation Storyboard.TargetName="Previous" 
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0" Duration="0:0:0.9" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </DockPanel.Triggers>
+
+                    <Grid Name="ControlsGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="8">
+                    <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="30"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <TextBlock TextWrapping="Wrap" Text="{Binding MediaList}"  VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="22" Foreground="White" Margin="25" FontFamily="Microsoft Sans Serif"/>
+                        </Grid>
+                    <Grid Grid.Row="1">
+                        <DockPanel HorizontalAlignment="Stretch">
+
+                            <Slider Style="{DynamicResource Horizontal_Slider}" Thumb.DragCompleted="timelineSlider_DragCompleted" Thumb.DragStarted="timelineSlider_DragStarted" Name="timelineSlider" Margin="5"  Width="{Binding Path=ActualWidth, ElementName=ParentPanel}" ValueChanged="SeekToMediaPosition" DragEnter="timelineSlider_DragEnter" PreviewDragEnter="timelineSlider_PreviewDragEnter" />
+
+
+                        </DockPanel>
+
+
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <DockPanel >
+                                <Button Click="BrowseButtonClick" BorderThickness="0" DockPanel.Dock="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="browser" Style="{StaticResource Transparentback}" Margin="2"  Width="40" Height="40"  FontSize="20" FontWeight="Bold" Foreground="White" Content="...." ToolTip="Open">
+                                    <Button.Background>
+                                        <LinearGradientBrush Opacity=".1"  StartPoint="0,0" EndPoint="0,1">
+                                            <GradientBrush.GradientStops>
+                                                <GradientStopCollection>
+                                                    <GradientStop Color="#6B79C6" Offset="0.0"/>
+                                                    <GradientStop Color="#122BB8" Offset="1.0"/>
+                                                </GradientStopCollection>
+                                            </GradientBrush.GradientStops>
+                                        </LinearGradientBrush>
+                                    </Button.Background>
+                                </Button>
+                                <!-- Play button. -->
+                            <Button HorizontalAlignment="Left" Name="play" Template="{StaticResource controlButtonTemplate}" Click="OnMouseDownPlayMedia" Margin="2"  Width="50" Height="50"  FontSize="24" FontWeight="Bold" Foreground="LightGreen" Content="4" FontFamily="Webdings" ToolTip="Play" Background="Black"/>
+                            <!--<Button Template="{StaticResource controlButtonTemplate}" Click="OnMouseDownPauseMedia" Margin="2"   Width="40" Height="40" FontSize="14" FontWeight="Bold" Foreground="Orange" Content=";" FontFamily="Webdings" ToolTip="Pause" Background="Black" VerticalAlignment="Center"/>-->
+                            <Button HorizontalAlignment="Left" Template="{StaticResource controlButtonTemplate}" Click="OnMouseDownStopMedia" Margin="2"   Width="40" Height="40" FontSize="14" FontWeight="Bold" Foreground="Orange"  Content="&lt;"  FontFamily="Webdings" ToolTip="Pause" Background="Black" VerticalAlignment="Center"/>
+
+                            <!-- Volume slider. This slider allows a Volume range between 0 and 10. -->
+                            <!-- Volume slider. This slider allows a Volume range between 0 and 1. -->
+
+
+                            <Button DockPanel.Dock="Left" Template="{StaticResource controlButtonTemplate}" Click="OnMouseDownReloadMedia" Margin="3"  HorizontalAlignment="Right" Width="30" Height="30"  FontSize="14" FontWeight="Bold" Foreground="LightGreen" Content="q" FontFamily="Webdings" ToolTip="Reload" Background="Black" RenderTransformOrigin="2.633,0.6"/>
+                           
+                                <Slider Style="{DynamicResource Volumn_Slider}" HorizontalAlignment="Right" DockPanel.Dock="Right" Name="volumeSlider" VerticalAlignment="Center" ValueChanged="ChangeMediaVolume" 
+       Minimum="0" Maximum="1" Value="0.5" Width="70">
+                                    
+                                </Slider>
+                               
+                                <Button Style="{DynamicResource Transparentback}" DockPanel.Dock="Right" HorizontalAlignment="Right" Foreground="White" VerticalAlignment="Center" Margin="5" FontSize="24" FontWeight="Bold" BorderThickness="0" Background="Transparent" Click="Button_Click"  FontFamily="Webdings" ToolTip="Mute">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock  HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" FontSize="20"  Background="Transparent"  Text="X" FontFamily="Webdings" ToolTip="Mute" />
+                                        <TextBlock Name="Mute"  HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="Red" FontSize="10"  Background="Transparent"  Text="r" FontFamily="Webdings" Visibility="Collapsed"  ToolTip="Mute" />
+                                    </StackPanel>
+                                </Button>
+                                <Slider  DockPanel.Dock="Right" Name="speedRatioSlider" VerticalAlignment="Center" ValueChanged="ChangeMediaSpeedRatio"  Value="1" Width="70" />
+                            <TextBlock DockPanel.Dock="Right" Foreground="White" Margin="5"  HorizontalAlignment="Right" VerticalAlignment="Center">Speed</TextBlock>
+                            <!-- Seek to slider. Ths slider allows you to jump to different parts of the media playback. -->
+                        </DockPanel>
+                    </Grid>
+                </Grid>
+            </DockPanel>
+            </Grid>
+        </DockPanel>
+      
+    </Grid>
+</Window>
